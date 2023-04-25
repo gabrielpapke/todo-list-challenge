@@ -8,8 +8,6 @@
 	--gray-600: #1a1a1a;
 	--gray-700: #0d0d0d;
 
-	--background: #454545;
-
 	--purple: #8284fa;
 	--purple-dark: #5e60ce;
 
@@ -31,7 +29,7 @@
 }
 
 body {
-	background: var(--background);
+	background: var(--gray-600);
 	color: var(--gray-100);
 	-webkit-font-smoothing: antialiased;
 }

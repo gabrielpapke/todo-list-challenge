@@ -1,2 +1,74 @@
 .item {
+	display: flex;
+	gap: 0.75rem;
+	padding: 1rem;
+	background-color: var(--gray-500);
+	border: 1px solid var(--gray-400);
+	border-radius: 8px;
+}
+
+.item + .item {
+	margin-top: 0.75rem;
+}
+.itemDone {
+	border: 1px solid var(--gray-500);
+}
+.itemDone .title {
+	color: var(--gray-300);
+	font-weight: bold;
+	text-decoration: line-through;
+}
+
+.checkIcon {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkIcon input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkIcon .unchecked {
+	display: block;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	border: 1px solid var(--blue);
+}
+
+.checkIcon .checked {
+	display: none;
+}
+
+.checkIcon input:checked ~ .checked {
+	display: block;
+	background: var(--purple);
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkIcon input:checked ~ .unchecked {
+	display: none;
+}
+
+.title {
+	font-size: 0.875rem;
+}
+.removeIcon svg {
+	cursor: pointer;
+	transition: 100ms ease color;
+}
+
+.removeIcon svg:hover {
+	color: var(--danger);
 }
