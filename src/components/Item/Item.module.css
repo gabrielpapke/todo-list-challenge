@@ -20,50 +20,36 @@
 }
 
 .checkIcon {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	height: 18px;
 }
-
-.checkIcon input {
-	position: absolute;
-	opacity: 0;
+.checkIcon span {
 	cursor: pointer;
-	height: 0;
-	width: 0;
-}
-
-.checkIcon .unchecked {
-	display: block;
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
-	border: 1px solid var(--blue);
-}
-
-.checkIcon .checked {
-	display: none;
-}
-
-.checkIcon input:checked ~ .checked {
-	display: block;
-	background: var(--purple);
-	border-radius: 50%;
-	width: 18px;
-	height: 18px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.checkIcon input:checked ~ .unchecked {
-	display: none;
+.checkIcon .unchecked {
+	border: 1px solid var(--blue);
+}
+
+.checkIcon .checked {
+	background: var(--purple);
+	color: var(--white);
 }
 
 .title {
 	font-size: 0.875rem;
+	flex: 1;
 }
+
+.removeIcon {
+	height: 18px;
+}
+
 .removeIcon svg {
 	cursor: pointer;
 	transition: 100ms ease color;
