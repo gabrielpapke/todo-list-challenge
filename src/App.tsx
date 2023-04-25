@@ -7,22 +7,9 @@ import { List } from "./components/List/List";
 import { TaskType } from "./components/Item/Item";
 import { useState } from "react";
 
-const tasksInitial: TaskType[] = [
-	{
-		id: 1,
-		title: "Uma tarefa teste",
-		done: false,
-	},
-	{
-		id: 2,
-		title: "Segunda tarefa teste",
-		done: false,
-	},
-];
-
 export function App() {
-	const [tasks, setTasks] = useState(tasksInitial);
-	const [idCounter, setIdCounter] = useState(tasksInitial.length + 1);
+	const [tasks, setTasks] = useState<TaskType[]>([]);
+	const [idCounter, setIdCounter] = useState(1);
 
 	function createTask(task: TaskType) {
 		setTasks([...tasks, task]);
