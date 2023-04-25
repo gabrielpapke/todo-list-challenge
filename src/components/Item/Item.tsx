@@ -2,7 +2,7 @@ import { Check, Trash } from "@phosphor-icons/react";
 import styles from "./Item.module.css";
 
 export interface TaskType {
-	id: number;
+	id?: number;
 	done: boolean;
 	title: string;
 }
