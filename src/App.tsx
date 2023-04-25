@@ -22,11 +22,9 @@ const tasksInitial: TaskType[] = [
 
 export function App() {
 	const [tasks, setTasks] = useState(tasksInitial);
-	const [idCounter, setIdCounter] = useState(tasksInitial.length);
+	const [idCounter, setIdCounter] = useState(tasksInitial.length + 1);
 
 	function createTask(task: TaskType) {
-		task.id = idCounter + 1;
-
 		setTasks([...tasks, task]);
 
 		setIdCounter((state) => state + 1);
@@ -53,7 +51,7 @@ export function App() {
 			<Header />
 
 			<div className={styles.wrapper}>
-				<Form onCreateTask={createTask} />
+				<Form onCreateTask={createTask} idCounter={idCounter} />
 				<List tasks={tasks} onCheckTask={checkTask} onDeleteTask={deleteTask} />
 			</div>
 		</>
